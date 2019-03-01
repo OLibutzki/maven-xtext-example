@@ -30,15 +30,9 @@
 		<repository>
 			<id>eclipse</id>
 			<layout>p2</layout>
-			<url>http://download.eclipse.org/releases/2018-12/</url>
-		</repository>
-		<repository>
-			<id>Xtext Update Site</id>
-			<layout>p2</layout>
-			<url>http://download.eclipse.org/modeling/tmf/xtext/updates/releases/${xtext.version}/</url>
+			<url>http://download.eclipse.org/releases/2019-03/</url>
 		</repository>
 	</repositories>
-
 
 	<dependencyManagement>
 		<dependencies>
@@ -53,6 +47,7 @@
 	</dependencyManagement>
 
 	<build>
+		<defaultGoal>verify</defaultGoal>
 		<pluginManagement>
 			<plugins>
 				<!-- xtend-maven-plugin is in pluginManagement instead of in plugins 
@@ -101,6 +96,11 @@
 					<groupId>org.codehaus.mojo</groupId>
 					<artifactId>exec-maven-plugin</artifactId>
 					<version>1.6.0</version>
+				</plugin>
+				<plugin>
+					<groupId>org.eclipse.tycho</groupId>
+					<artifactId>target-platform-configuration</artifactId>
+					<version>${tycho-version}</version>
 				</plugin>
 				<plugin>
 					<groupId>org.eclipse.tycho</groupId>
