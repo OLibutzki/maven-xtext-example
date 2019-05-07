@@ -1,3 +1,4 @@
 hero Superman can FLY {
+	val someJavaType = new my.pack.SomeJavaType
 	println("Hello I can fly!")
 }
